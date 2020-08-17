@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>ジブンカンリ</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#sun{
+			background-color: #ff3d00;
+			color: #ffffff;
+		}
+		#sat{
+			background-color:#661800;
+			color: #ffffff;
+		}
+		#today{
+			font-weight: bold;
+			border: dotted 1px #333333;
+		}
+		.holiday{
+			background-color:#f8aba6;
+		}
+	</style>
+</head>
+	
+<script type="text/javascript" src="./js/calendar.js"></script>
+<script type="text/javascript" src="./js/holiday.js"></script>
+<script type="text/javascript">
+
+	let year  = null;
+	let month = null;
+
+	function init() {
+		year  = new Date().getFullYear();
+		month = new Date().getMonth() + 1;
+		makeCalendar(year, month);
+	}
+  
+	function initNext() {
+		month++;
+		if (month > 12) { year++; month = 1; }
+		makeCalendar(year, month);
+	}
+  
+	function initLast() {
+		month--;
+		if (month <= 0) { year--; month = 12; }
+		makeCalendar(year, month);
+	}
+</script>
+
+<body onload="init();">
+	<header>
+		<div class="calendarHeader">
+			<span id="headerYear" ></span><br>
+			<span id="headerMonth"></span>月
+		</div>
+		<div class="navMenu">
+			<a href="javascript:init();" id="todayBtn">今日</a>
+			<a href="javascript:initLast();">＜</a>
+			<a href="javascript:initNext();">＞</a>
+			<a href="#" id="configBtn">設定</a>
+		</div>
+	</header>
+	<main>
+		<div id="calendar"></div>
+		<div id="inputArea">
+			<p id="selectInfo"></p>
+			<select id="hour">
+				<script>
+					//0時-23時
+					for(let i = 0; i <= 23; i++){
+						i = (i < 10) ? "0" + String(i) : i;
+						document.write('<option value="' + i + '">' + i + '</option>');
+					}
+				</script>
+			</select> 時
+			<select id="minute">
+				<script>
+					//00分-59分
+					for(let i = 0; i <= 59; i++){
+						i = (i < 10) ? "0" + String(i) : i; 
+						document.write('<option value="' + i + '">' + i + '</option>');
+					}
+				</script>
+      		</select> 分
+			<input id="memo" type="text" size="60">
+			<a href="#" id="saveBtn">登録</a>
+			<div id="result" class="box"></div>
+		</div>
+	</main>
+	<footer>
+		Copyright c 2019 JIBUN-KANRI All Rights Reserved.
+	</footer>
+</body>
+
+</html>

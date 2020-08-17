@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample2_15</title>
+  </head>
+  <body>
+    <h2>配列の宣言と値の表示</h2>
+<script>
+  let ten  = new Array(80, 90, 100);
+  let ten1 = [10, 20, 30];
+  document.write( ten + '<br>' );
+  document.write( ten1 + '<br>' );
+  document.write( '----- <br>' );
+  ten1[0] = 40
+  document.write( ten1 + '<br>' );
+  document.write( ten1[0] + '<br>' );
+
+  for(let i = 0; i < ten.length; i++) {
+    document.write( ten[i] + '<br>' );
+  }
+  for(let i in ten) {
+    document.write( ten[i] + '<br>' );
+  }
+  for(let i of ten) {
+    document.write( i + '<br>' );
+  }
+</script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+@charset "utf-8";
+header {
+  position: fixed;
+  width: 100%;
+  top: 0px; 
+  left: 0px; 
+  height: 55px;
+  text-align: center;
+  background-color:#ff3d00;
+}
+main {
+  position: relative;
+  top: 40px;
+  text-align: center;
+  color:#551400;
+}
+ol {
+  margin: 0 auto;
+  width: 100px;
+}
+footer {
+  font-size: 8px;
+  color: #ffffff;
+  position: fixed;
+  width: 100%;
+  bottom: 0px; 
+  left: 0px; 
+  text-align: center;
+  background-color:#ff3d00;
+}

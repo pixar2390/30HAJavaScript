@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample2_19</title>
+  </head>
+  <body>
+    <h2>関数の利用(成績判定)</h2>
+<script>
+function seisekiHantei(chukan, kimatsu) { // 成績判定関数
+  let avg = (chukan + kimatsu) / 2;
+  if ( avg > 60 ) {
+    return '合格';
+  } else {
+    return '不合格';
+  }
+}
+let aChu = 80;
+let aKim = 50;
+document.write('A君は' + seisekiHantei(aChu, aKim) + '<br>');
+let bChu = 40;
+let bKim = 70;
+document.write('B君は' + seisekiHantei(bChu, bKim)+ '<br>');
+</script>
+  </body>
+</html>

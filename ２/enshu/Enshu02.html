@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Enshu02</title>
+  </head>
+  <body>
+    <h2>凶が出ないおみくじ</h2>
+<script>
+  let omikuji = Math.floor(Math.random() * 4); // 0〜3までの乱数を生成
+
+  let size = 10;      // フォントサイズの指定
+  let omikujiStr = '';
+
+  if ( omikuji == 3 ) {
+    omikujiStr = '大吉！！！';
+  } else if ( omikuji == 2 ) {
+    omikujiStr = '吉！！';
+  } else if ( omikuji == 1 ) {
+    omikujiStr = '中吉！';
+  } else if ( omikuji == 0 ) {
+    omikujiStr = '小吉';
+  }
+  size = size + size * omikuji;
+  document.write( '<div style="font-size: ' + size + 'px;">' + omikujiStr + '</div>' );
+</script>
+  </body>
+</html>

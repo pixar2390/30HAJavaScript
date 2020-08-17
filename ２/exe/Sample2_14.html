@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample2_14</title>
+  </head>
+  <body>
+    <h2>1～100までの合計を求める</h2>
+    <p>(合計が1000を超えたら加算を止める)</p>
+<script>
+  let sum = 0;
+  let i;
+  for( i = 0; i <= 100; i++ ) {
+    sum = sum + i;
+    if (sum > 1000) {
+      break;
+    }
+  }
+  document.write( i + '<br>' );
+  document.write( sum + '<br>' );
+</script>
+  </body>
+</html>

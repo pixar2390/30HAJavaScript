@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>jqueryサンプル</title>
+	<meta charset="utf-8">
+</head>
+	
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<script>
+  //DOM要素の読み込みが終わったら実行される
+  $(function(){
+    
+    //実行時に文字色を変える
+    $('#text1').css('color', '#0000cc');
+    
+    //ボタンクリック時に文字色を変える
+    $('#btn1').on('click', function(){
+      $('#text2').css('color', '#00cc00');
+    });
+    
+    //マウスオーバー時に文字サイズを変える
+    $('#text3').hover(
+      //マウスカーソルが重なった時
+      function(){ 
+        $('#text3').css('font-size', '36pt');
+        $('#text3').css('color', '#cc0000');
+      } ,
+      //マウスカーソルが離れた時
+      function(){ 
+        $('#text3').css('font-size', '12pt'); 
+        $('#text3').css('color', '#000000');
+      } 
+    );
+  });  
+</script>
+  
+<body>
+  jQueyを用いて下記のテキストを変化させます！
+  <div id="text1">DOM読込完了時</div>
+  <div id="text2">ボタンクリック時</div>
+  <div id="text3">マウスオーバー時</div>
+  <button type="button" id="btn1">ボタン</button>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Enshu07</title>
+  </head>
+  <body>
+    <h2>簡単カウンター(タイマー機能付き)</h2>
+    <p>
+      <a href="#" onclick="minus();">減＜</a>
+      <span id="counterarea">5</span>
+      <a href="#" onclick="plus();">＞増</a>
+    </p>
+    <input type="button" value="タイマー開始" onclick="timerstart();" />
+<script>
+let counter = 5;
+let repeat = null;
+let disparea = document.getElementById("counterarea");
+let timerstart = function() {
+  repeat = setTimeout('timermove()', 1000);
+}
+let timermove = function() {
+  if ( counter <= 0 ) {
+    clearTimeout(repeat);
+    repeat = null;
+  } else {
+    counter--;
+    disparea.innerHTML = counter;
+    repeat = setTimeout('timermove()', 1000);
+  }
+}
+let minus = function() {
+  if ( counter > 0 ) {
+    counter--;
+    disparea.innerHTML = counter;
+  }
+}
+let plus = function() {
+  counter++;
+  disparea.innerHTML = counter;
+}
+</script>
+  </body>
+</html>

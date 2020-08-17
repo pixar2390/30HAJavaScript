@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample2_18</title>
+  </head>
+  <body>
+    <h2>連想配列の利用</h2>
+<script>
+  let fruits = {'リンゴ': 'apple',
+                'バナナ': 'banana',
+                'みかん': 'orange'};
+
+  let word = fruits['みかん'];
+  document.write( 'みかんの英語は' + word + '<br>' );
+// 連想配列のループ処理                 
+  for(let nihongo in fruits) {
+    document.write( '日本語：' + nihongo + '／英語：' + fruits[nihongo] + '<br>' );
+  }
+</script>
+  </body>
+</html>

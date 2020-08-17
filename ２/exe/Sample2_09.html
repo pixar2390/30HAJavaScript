@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample2_09</title>
+  </head>
+  <body>
+    <h2>月の判定</h2>    
+<script>
+  let month = Number(window.prompt('今は何月ですか？'));  
+  if (1 <= month) {
+    if (month <= 12) {
+      document.write( '正しい月です' );
+    } else {
+      document.write( '月の入力エラーです' );
+    }
+  } else {
+    document.write( '月の入力エラーです' );
+  }
+</script>
+  </body>
+</html>

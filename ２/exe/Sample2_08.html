@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample2_08</title>
+  </head>
+  <body>
+    <h2>年齢の判定</h2>    
+<script>
+  let age = window.prompt('あなたは何歳ですか？');  
+  age = Number(age);
+  if (age < 0) {
+    document.write( 'まだ生まれていませんよ' );
+  } else if (age < 20){
+    document.write( '未成年ですね' );
+  } else if (age <= 100) {
+    document.write( '成年ですね' );
+  } else {
+    document.write( '目指せ長寿日本一！' );
+  }
+</script>
+  </body>
+</html>

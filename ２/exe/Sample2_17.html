@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample2_17</title>
+  </head>
+  <body>
+    <h2>ループを使った配列の表示</h2>
+<script>
+  let fruits = ['リンゴ', 'バナナ'];
+
+  for(let i = 0; i < fruits.length; i++) {
+    document.write( fruits[i] + '<br>' );
+  }
+
+// 配列要素の追加
+  document.write('---"ぶどう","なし"を先頭に追加する---<br>');
+  fruits.unshift('ぶどう', 'なし');
+  for(let i in fruits) {
+    document.write( fruits[i] + '<br>' );
+  }
+  document.write('---ループ処理２---<br>');
+  for(let fruit of fruits) {
+    document.write( fruit + '<br>' );
+  }
+</script>
+  </body>
+</html>

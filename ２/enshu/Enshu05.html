@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Enshu05</title>
+  </head>
+  <body>
+    <h2>凶が出ないおみくじ</h2>
+<script>
+  let count = Number(window.prompt('何回おみくじ引く？'));
+  let omikujiStr = ['小吉','中吉！','吉！！','大吉！！！'];
+
+  for ( let i = 0; i < count; i++ ) {
+    let omikuji = Math.floor(Math.random() * 4); // 0〜3までの乱数を生成
+    let size = 10;      // フォントサイズの指定
+    size = size + size * omikuji;
+    document.write( '<div style="font-size: ' + size + 'px;">' + omikujiStr[omikuji] + '</div>' );
+  }
+</script>
+  </body>
+</html>
